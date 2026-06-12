@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma szeregu harmonicznego Dziewulski Z50</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:40px;">
+    <script language="JavaScript">
+        var suma_dzi = 0;
+        var i_dzi = 1;
+        do {
+            suma_dzi = suma_dzi + 1 / i_dzi;
+            i_dzi++;
+        }
+        while(i_dzi <= 1000000);
+        document.write("Suma szeregu harmonicznego od 1 do 1000000 = " + suma_dzi.toFixed(6) + "<br>");
+        document.write("Dziewulski<br>");
+    </script>
+</div>
+</body>
+</html>
+<!-- Dziewulski Z50_JS -->

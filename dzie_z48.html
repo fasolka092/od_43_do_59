@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie danych Dziewulski Z48</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        do {
+            var liczba1 = prompt("wysokość=", "");
+            var h_dzi = parseFloat(liczba1);
+        }
+        while(h_dzi <= 0);
+        do {
+            var liczba1 = prompt("podstawę=", "");
+            var a_dzi = parseFloat(liczba1);
+        }
+        while(!(a_dzi > 0));
+        var Pole = a_dzi * h_dzi / 2;
+        document.write("Pole = " + Pole.toFixed(2) + " cm^2" + "<br>");
+    </script>
+</div>
+</body>
+</html>
+<!-- Dziewulski Z48_JS -->

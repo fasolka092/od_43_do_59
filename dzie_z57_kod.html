@@ -1,0 +1,56 @@
+<textarea rows="40" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Uzycie petli for do zmiany wielkosci tekstu Dziewulski Z57</title>
+    <script language="JavaScript">
+        document.write("<div style='font-size:2cm;color:red;'>Dziewulski</div>");
+        document.write("<div style='font-size:5mm;color:blue;'>Uzycie petli for do zmiany wielkosci tekstu.</div>");
+
+        // 1) dwie liczby z przedzialu <20,60> - kazda sprawdzana osobno petla do...while
+        var l1_t_dzi;
+        do {
+            l1_t_dzi = parseInt(prompt("podaj liczbe l1 z przedzialu <20,60>=", ""));
+            if(l1_t_dzi < 20 || l1_t_dzi > 60) {
+                alert("liczba l1 nie nalezy do przedzialu <20,60>");
+            }
+        } while(l1_t_dzi < 20 || l1_t_dzi > 60);
+
+        var l2_t_dzi;
+        do {
+            l2_t_dzi = parseInt(prompt("podaj liczbe l2 z przedzialu <20,60>=", ""));
+            if(l2_t_dzi < 20 || l2_t_dzi > 60) {
+                alert("liczba l2 nie nalezy do przedzialu <20,60>");
+            }
+        } while(l2_t_dzi < 20 || l2_t_dzi > 60);
+
+        // 2) wartosc poczatkowa wielkosci tekstu
+        var pocz_dzi = parseInt(prompt("podaj poczatkowa wielkosc tekstu (px)=", ""));
+
+        // 3) dowolny tekst
+        var tekst_dzi = prompt("podaj dowolny tekst=", "");
+
+        // l1 < l2 -> tekst rosnie o 5px (stop gdy > 100px)
+        if(l1_t_dzi < l2_t_dzi) {
+            for(var i_dzi = pocz_dzi; i_dzi <= 100; i_dzi = i_dzi + 5) {
+                document.write("<p style=\"font-size:" + i_dzi + "px; color: black;\"><br>" + tekst_dzi + "<br></p>");
+            }
+        }
+        // l2 < l1 -> tekst maleje o 5px (stop gdy < 0px)
+        else if(l2_t_dzi < l1_t_dzi) {
+            for(var i_dzi = pocz_dzi; i_dzi >= 0; i_dzi = i_dzi - 5) {
+                document.write("<p style=\"font-size:" + i_dzi + "px; color: black;\"><br>" + tekst_dzi + "<br></p>");
+            }
+        }
+        // l1 = l2 -> tekst wyswietli sie raz
+        else {
+            document.write("<p style=\"font-size:" + pocz_dzi + "px; color: black;\"><br>" + tekst_dzi + "<br></p>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!-- Dziewulski Z57_JS -->
+</textarea>

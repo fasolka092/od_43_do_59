@@ -1,0 +1,27 @@
+<textarea rows="40" cols="100">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie boków trójkąta Dziewulski Z49</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:40px;">
+    <script language="JavaScript">
+        var a_dzi, b_dzi, c_dzi;
+        do {
+            a_dzi = parseFloat(prompt("Podaj bok a:", ""));
+            b_dzi = parseFloat(prompt("Podaj bok b:", ""));
+            c_dzi = parseFloat(prompt("Podaj bok c:", ""));
+        }
+        while(!((a_dzi > 0) && (b_dzi > 0) && (c_dzi > 0) && (a_dzi + b_dzi > c_dzi) && (a_dzi + c_dzi > b_dzi) && (c_dzi + b_dzi > a_dzi)));
+        document.write("Boki tworzą trójkąt!<br>");
+        document.write("a = " + a_dzi + "<br>");
+        document.write("b = " + b_dzi + "<br>");
+        document.write("c = " + c_dzi + "<br>");
+    </script>
+</div>
+</body>
+</html>
+<!-- Dziewulski Z49_JS -->
+</textarea>

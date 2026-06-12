@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Obliczanie liczb pierwszych podanych wzorem Dziewulski Z58</title>
+    <script language="JavaScript">
+        document.write("<div style='font-size:2cm;color:red;'>Dziewulski</div>");
+        document.write("<div style='font-size:5mm;color:blue;'>Obliczanie liczb pierwszych ze wzoru w(i)=i*i+i+41 dla i=0,1,...,39. Zatrzymanie ekranu po pieciu liniach.</div>");
+
+        for(var i_dzi = 0; i_dzi <= 39; i_dzi++) {
+            var w_dzi = i_dzi * i_dzi + i_dzi + 41;
+            document.write("i=" + i_dzi + "<br>");
+            document.write("w(" + i_dzi + ")=" + w_dzi + "<br><br>");
+
+            // zatrzymanie ekranu po pieciu liniach
+            if((i_dzi + 1) % 5 == 0) {
+                confirm("Wyswietlono " + (i_dzi + 1) + " liczb. Nacisnij OK aby kontynuowac.");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!-- Dziewulski Z58_JS -->

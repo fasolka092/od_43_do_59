@@ -1,0 +1,80 @@
+<textarea rows="40" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Teoria dotyczaca petli Dziewulski Z43</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: red; }
+        h2 { color: blue; }
+        pre { background: #f0f0f0; padding: 8px; border: 1px solid #ccc; }
+        .petla { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Dziewulski &mdash; Teoria dotyczaca petli</h1>
+    <p>Trzy rodzaje petli w jezyku JavaScript.</p>
+
+    <div class="petla">
+        <h2>1) Petla for</h2>
+        <p><b>Konstrukcja:</b></p>
+        <pre>for (zainicjowanie_zmiennej; warunek_konczacy_wykonywanie_petli; zmiana_zmiennej) {
+    kod ktory zostanie wykonany pewna ilosc razy
+}</pre>
+        <p><b>Opis:</b> petla for sluzy do powtarzania kodu okreslona (zwykle znana) ilosc razy.
+        Najpierw inicjuje zmienna sterujaca, sprawdza warunek, wykonuje kod, a na koncu zmienia
+        zmienna sterujaca i ponownie sprawdza warunek.</p>
+        <p><b>Schemat blokowy:</b></p>
+        <pre>        [ START ]
+            |
+   [ inicjalizacja zmiennej ]
+            |
+        [ warunek? ] ---- NIE ----&gt; [ KONIEC ]
+            | TAK
+        [ kod petli ]
+            |
+   [ zmiana zmiennej ]
+            |
+        (powrot do warunku)</pre>
+    </div>
+
+    <div class="petla">
+        <h2>2) Petla while z kontrolowanym wejsciem</h2>
+        <p><b>Konstrukcja:</b></p>
+        <pre>while (wyrazenie_sprawdzajace_zakonczenie_petli) {
+    ...fragment kodu ktory bedzie powtarzany...
+}</pre>
+        <p><b>Opis:</b> petla while najpierw sprawdza warunek, a potem cos wykonuje. Petla moze
+        sie nie wykonac ani razu, jesli warunek od poczatku jest falszywy (kontrolowane wejscie).</p>
+        <p><b>Schemat blokowy:</b></p>
+        <pre>        [ START ]
+            |
+        [ warunek? ] ---- NIE ----&gt; [ KONIEC ]
+            | TAK
+        [ kod petli ]
+            |
+        (powrot do warunku)</pre>
+    </div>
+
+    <div class="petla">
+        <h2>3) Petla do...while z kontrolowanym wyjsciem</h2>
+        <p><b>Konstrukcja:</b></p>
+        <pre>do {
+    ...fragment kodu ktory bedzie powtarzany...
+} while (warunek)</pre>
+        <p><b>Opis:</b> petla do...while zawsze wykona jedna iteracje, zanim sprawdzi warunek.
+        Zawsze wiec wykona jakies zadanie co najmniej raz (kontrolowane wyjscie).</p>
+        <p><b>Schemat blokowy:</b></p>
+        <pre>        [ START ]
+            |
+        [ kod petli ]
+            |
+        [ warunek? ] ---- TAK ----&gt; (powrot do kodu petli)
+            | NIE
+        [ KONIEC ]</pre>
+    </div>
+</body>
+</html>
+<!-- Dziewulski Z43_JS -->
+</textarea>

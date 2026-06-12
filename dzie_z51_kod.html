@@ -1,0 +1,24 @@
+<textarea rows="40" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Obliczanie silni w sposob iteracyjny Dziewulski Z51</title>
+    <script language="JavaScript">
+        var n_dzi = prompt("podaj liczbe n=", "");
+        n_dzi = parseInt(n_dzi);
+        var silnia_dzi = 1;
+        if(n_dzi > 0) {
+            for(var i_dzi = 1; i_dzi <= n_dzi; i_dzi++) {
+                silnia_dzi = silnia_dzi * i_dzi;
+            }
+        }
+        document.write("n=" + n_dzi + "<br>");
+        document.write(n_dzi + "!=" + silnia_dzi);
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!-- Dziewulski Z51_JS -->
+</textarea>

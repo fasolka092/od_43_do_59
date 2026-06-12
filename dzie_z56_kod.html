@@ -1,0 +1,42 @@
+<textarea rows="40" cols="100">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Uzycie petli for do rysowania w trybie tekstowym Dziewulski Z56</title>
+    <script language="JavaScript">
+        document.write("<div style='font-size:2cm;color:red;'>Dziewulski</div>");
+        document.write("<div style='font-size:5mm;color:blue;'>Uzycie petli for do rysowania w trybie tekstowym. Prostokat z gwiazdek o obliczonych wymiarach a i b (3 petle).</div>");
+
+        var imie_dzi = prompt("podaj imie=", "");
+        var nazwisko_dzi = prompt("podaj nazwisko=", "");
+
+        var a_dzi = (nazwisko_dzi.length % 4) + 5;   // a = (liczba liter nazwiska mod 4) + 5
+        var b_dzi = (imie_dzi.length % 6) + 20;       // b = (liczba liter imienia mod 6) + 20
+
+        // przygotowanie spacji srodkowych (spacji 2x wiecej niz gwiazdek) - bez petli
+        var srodek_dzi = "*" + "&nbsp;&nbsp;".repeat(b_dzi - 2) + "*";
+
+        // Pierwsza petla - gorne poziome gwiazdki
+        for(var i_dzi = 1; i_dzi <= b_dzi; i_dzi++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        // Druga petla - srodkowe (pionowe) gwiazdki
+        for(var i_dzi = 1; i_dzi <= a_dzi - 2; i_dzi++) {
+            document.write(srodek_dzi + "<br>");
+        }
+
+        // Trzecia petla - dolne poziome gwiazdki
+        for(var i_dzi = 1; i_dzi <= b_dzi; i_dzi++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!-- Dziewulski Z56_JS -->
+</textarea>

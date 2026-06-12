@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Uzycie petli for do rysowania w trybie tekstowym Dziewulski Z55</title>
+    <script language="JavaScript">
+        document.write("<div style='font-size:2cm;color:red;'>Dziewulski</div>");
+        document.write("<div style='font-size:5mm;color:blue;'>Uzycie petli for do rysowania w trybie tekstowym. Prostokat z gwiazdek o wczytanych wymiarach a i b (4 petle).</div>");
+
+        var a_dzi = parseInt(prompt("podaj wysokosc a=", ""));
+        var b_dzi = parseInt(prompt("podaj szerokosc b=", ""));
+
+        // Pierwsza petla - gorne poziome gwiazdki
+        for(var i_dzi = 1; i_dzi <= b_dzi; i_dzi++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        // Druga petla - przygotowanie wiersza srodkowego (spacji 2x wiecej niz gwiazdek)
+        var wiersz_dzi = "*";
+        for(var i_dzi = 1; i_dzi <= b_dzi - 2; i_dzi++) {
+            wiersz_dzi = wiersz_dzi + "&nbsp;&nbsp;";
+        }
+        wiersz_dzi = wiersz_dzi + "*";
+
+        // Trzecia petla - wyswietlenie przygotowanego wiersza srodkowego
+        for(var i_dzi = 1; i_dzi <= a_dzi - 2; i_dzi++) {
+            document.write(wiersz_dzi + "<br>");
+        }
+
+        // Czwarta petla - dolne poziome gwiazdki
+        for(var i_dzi = 1; i_dzi <= b_dzi; i_dzi++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
+<!-- Dziewulski Z55_JS -->
